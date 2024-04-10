@@ -1,0 +1,90 @@
+.service-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; // Use 'gap' instead of 'column-gap' for flex items
+  min-height: 310px;
+  padding: 50px;
+  background-color: var(--color-gray);
+  border: var(--border);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow);
+  @include mobile {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 27px;
+  }
+  &-accent-bg {
+    background-color: var(--color-accent);
+  }
+  &-dark-bg {
+    background-color: var(--color-dark);
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px; // Use 'gap' for flex items
+    @include mobile {
+      display: contents;
+    }
+  }
+  &__image {
+    align-self: center;
+    @include desktop {
+      max-width: 50%;
+      height: auto;
+    }
+    @include mobile {
+      max-width: 165px;
+      height: 129px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 500;
+    font-size: 30px;
+    font-weight: bold;
+    @include mobile {
+      grid-column: -1/1;
+    }
+  }
+  &__link {
+    --serviceCardLinkIconColor: var(--color-accent);
+    display: inline-flex;
+    align-items: center;
+    column-gap: 15px;
+    font-size: 20px;
+    @include mobile {
+      align-self: end;
+    }
+    &-lable {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--light {
+      --serviceCardLinkIconColor: var(--color-dark);
+      color: var(--color-light);
+    }
+
+    @include hover {
+      opacity: 0.7;
+    }
+
+    &-icon-wrapper {
+      @include square(41px);
+      @include flex-center;
+      background-color: currentColor;
+      border-radius: 50%;
+      position: relative;
+
+      svg {
+        color: var(--serviceCardLinkIconColor);
+      }
+    }
+  }
+}

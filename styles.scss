@@ -1,0 +1,6 @@
+@import "./styles/normalize", "./styles/fonts", "./styles/mixins",
+  "./styles/media", "./styles/variables", "./styles/utils", "./styles/globals";
+
+@import "./styles/blocks/field","./styles/blocks/radios.scss","./styles/blocks/radio.scss", "./styles/blocks/button","./styles/blocks/grid", "./styles/blocks/burger-button",
+  "./styles/blocks/header", "./styles/blocks/cross-button",
+  "./styles/blocks/mobile-overlay", "./styles/blocks/section","./styles/blocks/hero","./styles/blocks/services","./styles/blocks/puddle-bg","./styles/blocks/service-card.scss","./styles/blocks/banner","./styles/blocks/about_compony","./styles/blocks/about_working","./styles/blocks/about_team","./styles/blocks/contact_us","./styles/blocks/contact-us";

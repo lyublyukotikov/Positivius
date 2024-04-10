@@ -1,0 +1,21 @@
+.contact_us{
+  display: flex;
+  align-items: center;
+ 
+  background-color: var(--color-gray);
+  border-radius: var(--border-radius-large);
+padding-top:63px;
+padding-bottom:63px;
+  column-gap: 50px;
+  align-items: center;
+
+  &__form{
+    padding-left:100px;
+  
+  }
+  &__image{
+ 
+  }
+
+}
+

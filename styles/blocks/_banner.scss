@@ -1,0 +1,37 @@
+.banner {
+  --bannerImageOffsetY: 24px;
+  padding-block: var(--bannerImageOffsetY);
+  &__description{
+    max-width: 500px;
+  }
+  &__inner {
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius-large);
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+    align-items: center;
+    
+    @include mobile {
+      display: block;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
+    padding: 60px;
+    align-items: start;
+    @include mobile {
+      padding: 50px;
+    }
+  }
+  &__image {
+    margin-block: calc(var(--bannerImageOffsetY) * -1);
+    @include mobile {
+      display:none;
+    }
+  }
+
+}
